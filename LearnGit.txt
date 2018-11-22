@@ -1,0 +1,201 @@
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn
+$ git -- version
+unknown option: --
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn
+$ touch index.html
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn
+$ touch app.js
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn
+$ git init
+Initialized empty Git repository in C:/Users/Oscar Winberg/Desktop/GitLearn/.git/
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git config --global user.name 'Oscar Winberg'
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git config --global user.email 'oscarwinberg@outlook.com'
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add index.html
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        app.js
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git rm --cached index.html
+rm 'index.html'
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        app.js
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add *.html
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        app.js
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git rm --cached index.html
+rm 'index.html'
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add .
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   app.js
+        new file:   index.html
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   app.js
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add .
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   app.js
+        new file:   index.html
+
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git commit
+[master (root-commit) 7b4f6fe] Initial commit
+ 2 files changed, 9 insertions(+)
+ create mode 100644 app.js
+ create mode 100644 index.html
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add -
+fatal: pathspec '-' did not match any files
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git add .
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git commit add -m 'Changed app.js'
+error: pathspec 'add' did not match any file(s) known to git
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ ^C
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ git commit -m 'Changed app.js'
+[master aa9fd6f] Changed app.js
+ 1 file changed, 1 insertion(+)
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$ touch LearnGit.txt
+
+Oscar Winberg@DESKTOP-JOVNKPS MINGW64 ~/Desktop/GitLearn (master)
+$
